@@ -31,6 +31,10 @@ public class Report extends stone.dal.common.models.data.BaseDo {
   @ApiModelProperty(value = "Processed")
   private java.lang.Long duration;
 
+  @ApiModelProperty(value = "Punish Rule ID")
+  private java.lang.String punishRuleUid;
+
+
   @ApiModelProperty(value = "Reporter ID")
   private java.lang.String reporterUid;
 
@@ -109,6 +113,15 @@ public class Report extends stone.dal.common.models.data.BaseDo {
 
   public void setDuration(java.lang.Long duration) {
     this.duration = duration;
+  }
+
+  @javax.persistence.Column(name = "punish_rule_uid", length = 128)
+  public java.lang.String getPunishRuleUid() {
+    return this.punishRuleUid;
+  }
+
+  public void setPunishRuleUid(java.lang.String punishRuleUid) {
+    this.punishRuleUid = punishRuleUid;
   }
 
   @javax.persistence.Column(name = "reporter_uid", length = 128)
