@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS uchuang DEFAULT CHARSET UTF8 COLLATE UTF8_GENERAL_CI;
+USE uchuang;
+CREATE TABLE punish_rule(escalation_percent decimal(18,3) not null,init_duration decimal(8,0) not null,policy varchar(100) not null,reason varchar(100) not null,uid varchar(128) not null,PRIMARY KEY(uid));
+CREATE TABLE report(duration decimal(10,0),img varchar(500) not null,is_anonymous decimal(1,0),player_name varchar(100) not null,player_uid varchar(100) not null,processed decimal(1,0),punish_result varchar(100),punish_rule_uid varchar(128), reporter_uid varchar(128),type varchar(100),uid varchar(128) not null,PRIMARY KEY(uid));
