@@ -1,1 +1,0 @@
-java -Dxlsx=../entities.xlsx -Dtarget=../src -DrootPackage=com.uchuang.gamereport  -jar stone-do-generator.jar
